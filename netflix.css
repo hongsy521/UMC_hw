@@ -1,0 +1,126 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+    
+#backimg{
+    width:100%;
+    vertical-align: middle;
+    
+    
+}
+#header{
+    position: fixed;
+    top:0;
+}
+#logoimg{
+    text-align: left;
+
+}
+#loginbutton{
+    float: right;
+    height:45px;
+    width:100px;
+
+}
+#maincontainer{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    width:50%;
+    height:50%;
+    text-align: center;
+}
+#maintitle{
+    font-size: xx-large;
+    color:white;
+}
+#maintext{
+    font-size: large;
+    color:white;
+}
+#subtext{
+    font-size: medium;
+    color:white;
+}
+#maincontainer2{
+    text-align: center;
+}
+#emailbox{
+    width:500px;
+    height:45px;
+}
+#startbutton{
+    width:100px;
+    height:50px;
+}
+#loginpage{
+    width:100%;
+    height:700px; 
+    text-align: center;
+    background-color: grey;
+}
+#questpagewrap{
+
+    width: 100%;
+    height: 700px;
+    background-color: rgb(59, 56, 56);
+}
+#questcontent{
+    width: 90%;
+	height: 84px;
+    color:white;
+	display: flex;
+	align-items: center;
+    background-color: grey;
+    border-color: black;
+    border-radius: 15px;
+}
