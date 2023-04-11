@@ -1,5 +1,6 @@
 
 function scrollToElement() {
-    var element = document.getElementById("login-element");
+    console.log("클릭");
+    var element = document.getElementById("loginwrap");
     element.scrollIntoView();
 }
