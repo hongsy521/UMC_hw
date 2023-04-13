@@ -68,8 +68,16 @@ table {
     z-index: 3;
     width:1519px;
     display:flex;
+    justify-content: space-between;
 }
 
+#firstpage{
+    border-bottom: 30px solid black;
+}
+#backimg{
+    width:100%;
+    height:100%;
+}
 
 #logoimg{
     text-align: left;
