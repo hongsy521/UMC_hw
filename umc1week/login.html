@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./netflix.css">
+    <script src="netflix.js" async></script>
+</head>
+<body>
+    
+    <div id="loginpage">
+        <img id="backimg" src="https://assets.nflxext.com/ffe/siteui/vlv3/2e884ce2-da1c-4501-ab9a-10c534d30975/fcdbcd90-f133-4081-ac82-34918f18aabf/KR-ko-20230327-popsignuptwoweeks-perspective_alpha_website_small.jpg">
+        <div id="loginwrap">
+        <h1 id="login-element" style="color:white;">로그인</h1><br>
+        <input type="id" placeholder="이메일 주소 또는 전화번호" style="width:200px;height: 50px;border-radius:#000000;background-color: rgb(155, 147, 147);">
+        <input type="password" placeholder="비밀번호" style="width:200px;height: 50px;border-radius: #000000;background-color: rgb(155, 147, 147);">
+        <input type="submit" style="width:200px;height: 50px;background-color: red;color: white;">
+        <div id="helptext1">
+        <input type="checkbox"><span>로그인 정보 저장</span>
+        <a href="https://www.netflix.com/kr/LoginHelp">도움이 필요하신가요?</a>
+    </div><br>
+    <div>
+        <h2>Netflix 회원이 아닌가요?
+        <a href="https://www.netflix.com/kr/">지금 가입하세요.</a></h2><br>
+        
+            <div id="helptext2">이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 로봇이 아님을 확인합니다.<span style="color: blue;">자세히 알아보기.</span></div>
+            <a href="javascript:kakaoLogin();"><img src="https://www.gb.go.kr/Main/Images/ko/member/certi_kakao_login.png" style="width:130px;padding: 10px;"></a>
+            <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+            <script>
+                //da92ae9710c42daef15bb57101f92401
+                window.Kakao.init("da92ae9710c42daef15bb57101f92401");
+                function kakaoLogin(){
+                    window.Kakao.Auth.login({
+                        scope:'profile,account_email,gender',
+                        success:function(authObj){
+                            console.log(authObj);
+                            window.Kakao.API.request({
+                                url:'/v2/user/me',
+                                success:res=>{
+                                    const kakao_account=res.kakao_account;
+                                    console.log(kakao_account);
+                                }
+                            });
+                        }
+                    })
+                }
+            </script>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
